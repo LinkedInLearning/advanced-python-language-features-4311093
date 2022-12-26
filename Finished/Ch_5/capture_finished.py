@@ -6,7 +6,7 @@ name = input("What is your name? ")
 match name:
     case "":
         print("Hello, anonymous!")
-    case "Joe":
+    case "Joe" | "Joseph":
         print("Oh hi there, Joe!")
     case name:
         print(f"Hello, {name}!")
