@@ -13,7 +13,8 @@ class MyClass():
 
     # within classes, one blank line separates methods
     def function_name(self, arg1):
-        pass
+        print(sys.api_version)
+        print(os.name)
 
 
 # Long comments, like this one that flow across several lines, are
