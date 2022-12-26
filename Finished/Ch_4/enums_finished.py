@@ -6,11 +6,11 @@ from enum import Enum, unique, auto
 
 @unique
 class Fruit(Enum):
-  APPLE = 1
-  BANANA = 2
-  ORANGE = 3
-  TOMATO = 4
-  PEAR = auto()
+    APPLE = 1
+    BANANA = 2
+    ORANGE = 3
+    TOMATO = 4
+    PEAR = auto()
 
 
 # enums have human-readable values and types
@@ -28,4 +28,3 @@ print(Fruit.PEAR.value)
 myFruits = {}
 myFruits[Fruit.BANANA] = "Come Mr. Tally-man"
 print(myFruits[Fruit.BANANA])
-

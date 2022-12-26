@@ -3,26 +3,26 @@
 
 
 class Point():
-  def __init__(self, x, y):
-    self.x = x
-    self.y = y
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
 
-  def __repr__(self):
-    return "<Point x:{0},y:{1}>".format(self.x, self.y)
+    def __repr__(self):
+        return "<Point x:{0},y:{1}>".format(self.x, self.y)
 
-  # implement addition
-  def __add__(self, other):
-    return Point(self.x + other.x, self.y + other.y)
+    # implement addition
+    def __add__(self, other):
+        return Point(self.x + other.x, self.y + other.y)
 
-  # implement subtraction
-  def __sub__(self, other):
-    return Point(self.x - other.x, self.y - other.y)
+    # implement subtraction
+    def __sub__(self, other):
+        return Point(self.x - other.x, self.y - other.y)
 
-  # implement in-place addition
-  def __iadd__(self, other):
-    self.x += other.x
-    self.y += other.y
-    return self
+    # implement in-place addition
+    def __iadd__(self, other):
+        self.x += other.x
+        self.y += other.y
+        return self
 
 
 # Declare some points

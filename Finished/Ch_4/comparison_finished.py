@@ -3,35 +3,35 @@
 
 
 class Employee():
-  def __init__(self, fname, lname, level, yrsService):
-    self.fname = fname
-    self.lname = lname
-    self.level = level
-    self.seniority = yrsService
+    def __init__(self, fname, lname, level, yrsService):
+        self.fname = fname
+        self.lname = lname
+        self.level = level
+        self.seniority = yrsService
 
-  # implement comparison functions by emp level
-  def __ge__(self, other):
-    if self.level == other.level:
-      return self.seniority >= other.seniority
-    return self.level >= other.level
+    # implement comparison functions by emp level
+    def __ge__(self, other):
+        if self.level == other.level:
+            return self.seniority >= other.seniority
+        return self.level >= other.level
 
-  def __gt__(self, other):
-    if self.level == other.level:
-      return self.seniority > other.seniority
-    return self.level > other.level
+    def __gt__(self, other):
+        if self.level == other.level:
+            return self.seniority > other.seniority
+        return self.level > other.level
 
-  def __lt__(self, other):
-    if self.level == other.level:
-      return self.seniority < other.seniority
-    return self.level < other.level
+    def __lt__(self, other):
+        if self.level == other.level:
+            return self.seniority < other.seniority
+        return self.level < other.level
 
-  def __le__(self, other):
-    if self.level == other.level:
-      return self.seniority <= other.seniority
-    return self.level <= other.level
+    def __le__(self, other):
+        if self.level == other.level:
+            return self.seniority <= other.seniority
+        return self.level <= other.level
 
-  def __eq__(self, other):
-    return self.level == other.level
+    def __eq__(self, other):
+        return self.level == other.level
 
 
 # define some employees

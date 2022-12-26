@@ -2,10 +2,9 @@
 # demonstrate template string functions
 
 
-
 # Usual string formatting with f-strings
 str1 = "Advanced Python: Language Features"
-str2 = "Joe Marini"  
+str2 = "Joe Marini"
 outputstr = f"You're watching {str1} by {str2}"
 print(outputstr)
 

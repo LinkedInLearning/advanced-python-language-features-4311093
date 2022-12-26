@@ -9,7 +9,7 @@ print(b)
 s = "This is a string"
 print(s)
 
-# TODO: Try combining them. 
+# TODO: Try combining them.
 
 # TODO: Bytes and strings need to be properly encoded and decoded
 # before you can work on them together

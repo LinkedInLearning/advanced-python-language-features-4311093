@@ -4,7 +4,7 @@
 
 # use keyword-only arguments to help ensure code clarity
 def myFunction(arg1, arg2, *, suppressExceptions=False):
-  print(arg1, arg2, suppressExceptions)
+    print(arg1, arg2, suppressExceptions)
 
 
 # try to call the function without the keyword

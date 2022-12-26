@@ -4,11 +4,11 @@
 
 # define a function that takes variable arguments
 def addition(base, *args):
-  result = 0
-  for arg in args:
-    result += arg
+    result = 0
+    for arg in args:
+        result += arg
 
-  return result
+    return result
 
 
 # pass different arguments
