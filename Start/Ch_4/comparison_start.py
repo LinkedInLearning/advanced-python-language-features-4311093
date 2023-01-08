@@ -26,19 +26,14 @@ class Employee():
         pass
 
 
-def main():
-    # define some employees
-    dept = []
-    dept.append(Employee("Tim", "Sims", 5, 9))
-    dept.append(Employee("John", "Doe", 4, 12))
-    dept.append(Employee("Jane", "Smith", 6, 6))
-    dept.append(Employee("Rebecca", "Robinson", 5, 13))
-    dept.append(Employee("Tyler", "Durden", 5, 12))
+# define some employees
+dept = []
+dept.append(Employee("Tim", "Sims", 5, 9))
+dept.append(Employee("John", "Doe", 4, 12))
+dept.append(Employee("Jane", "Smith", 6, 6))
+dept.append(Employee("Rebecca", "Robinson", 5, 13))
+dept.append(Employee("Tyler", "Durden", 5, 12))
 
-    # TODO: Who's more senior?
+# TODO: Who's more senior?
 
-    # TODO: sort the items
-
-
-if __name__ == "__main__":
-    main()
+# TODO: sort the items

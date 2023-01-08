@@ -23,18 +23,13 @@ class Point():
         pass
 
 
-def main():
-    # Declare some points
-    p1 = Point(10, 20)
-    p2 = Point(30, 30)
-    print(p1, p2)
+# Declare some points
+p1 = Point(10, 20)
+p2 = Point(30, 30)
+print(p1, p2)
 
-    # TODO: Add two points
+# TODO: Add two points
 
-    # TODO: subtract two points
+# TODO: subtract two points
 
-    # TODO: Perform in-place addition
-
-
-if __name__ == "__main__":
-    main()
+# TODO: Perform in-place addition

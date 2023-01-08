@@ -21,17 +21,12 @@ class myColor():
         pass
 
 
-def main():
-    # create an instance of myColor
-    cls1 = myColor()
-    # TODO: print the value of a computed attribute
+# create an instance of myColor
+cls1 = myColor()
+# TODO: print the value of a computed attribute
 
-    # TODO: set the value of a computed attribute
+# TODO: set the value of a computed attribute
 
-    # TODO: access a regular attribute
+# TODO: access a regular attribute
 
-    # TODO: list the available attributes
-
-
-if __name__ == "__main__":
-    main()
+# TODO: list the available attributes

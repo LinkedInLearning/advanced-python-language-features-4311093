@@ -13,15 +13,10 @@ class Person():
     # TODO: use str for a more human-readable string
 
 
-def main():
-    # create a new Person object
-    cls1 = Person()
+# create a new Person object
+cls1 = Person()
 
-    # use different Python functions to convert it to a string
-    print(repr(cls1))
-    print(str(cls1))
-    print("Formatted: {0}".format(cls1))
-
-
-if __name__ == "__main__":
-    main()
+# use different Python functions to convert it to a string
+print(repr(cls1))
+print(str(cls1))
+print("Formatted: {0}".format(cls1))
