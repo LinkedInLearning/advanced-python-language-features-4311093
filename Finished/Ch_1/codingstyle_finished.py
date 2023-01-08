@@ -12,12 +12,14 @@ class MyClass():
         self.prop1 = "my class"
 
     # within classes, one blank line separates methods
-    def function_name(self, arg1):
+    def function_name(self, use_name):
         print(sys.api_version)
-        print(os.name)
+        if use_name:
+            print(os.name)
 
 
 # Long comments, like this one that flow across several lines, are
 # limited to 72 characters instead of 79 for lines of code.
 cls1 = MyClass()
 cls1.prop1 = "hello world"
+cls1.function_name(True)
