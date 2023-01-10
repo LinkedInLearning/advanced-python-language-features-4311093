@@ -2,7 +2,7 @@
 # customize string representations of objects
 
 
-class myColor():
+class MyColor():
     def __init__(self):
         self.red = 50
         self.green = 75
@@ -22,7 +22,7 @@ class myColor():
 
 
 # create an instance of myColor
-cls1 = myColor()
+cls1 = MyColor()
 # TODO: print the value of a computed attribute
 
 # TODO: set the value of a computed attribute

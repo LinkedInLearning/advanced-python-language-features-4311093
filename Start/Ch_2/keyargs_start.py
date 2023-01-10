@@ -3,10 +3,10 @@
 
 
 # use keyword-only arguments to help ensure code clarity
-def myFunction():
+def MyFunction():
     pass
 
 
 # try to call the function without the keyword
 # myFunction(1, 2, True)
-myFunction()
+MyFunction()

@@ -2,11 +2,11 @@
 # Use lambdas as in-place functions
 
 
-def CelsisusToFahrenheit(temp):
+def celsisus_to_fahrenheit(temp):
     return (temp * 9/5) + 32
 
 
-def FahrenheitToCelsisus(temp):
+def fahrenheit_to_celsisus(temp):
     return (temp-32) * 5/9
 
 

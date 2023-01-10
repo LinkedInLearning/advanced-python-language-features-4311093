@@ -3,11 +3,11 @@
 
 
 class Employee():
-    def __init__(self, fname, lname, level, yrsService):
+    def __init__(self, fname, lname, level, years_service):
         self.fname = fname
         self.lname = lname
         self.level = level
-        self.seniority = yrsService
+        self.seniority = years_service
 
     # implement comparison functions by emp level
     def __ge__(self, other):

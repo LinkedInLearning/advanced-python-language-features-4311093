@@ -3,7 +3,7 @@
 
 
 # define a function that takes variable arguments
-def addition(base, *args):
+def addition(*args):
     result = 0
     for arg in args:
         result += arg

@@ -2,7 +2,7 @@
 # customize string representations of objects
 
 
-class myColor():
+class MyColor():
     def __init__(self):
         self.red = 50
         self.green = 75
@@ -13,7 +13,7 @@ class myColor():
         if attr == "rgbcolor":
             return (self.red, self.green, self.blue)
         elif attr == "hexcolor":
-            return "#{0:02x}{1:02x}{2:02x}".format(self.red, self.green, self.blue)
+            return f"#{self.red:02x}{self.green:02x}{self.blue:02x}"
         else:
             raise AttributeError
 
@@ -32,7 +32,7 @@ class myColor():
 
 
 # create an instance of myColor
-cls1 = myColor()
+cls1 = MyColor()
 # print the value of a computed attribute
 print(cls1.rgbcolor)
 print(cls1.hexcolor)
