@@ -2,8 +2,8 @@
 # Demonstrate the use of lambda functions
 
 
-def MyFunction(arg1, arg2=None):
+def my_function(arg1, arg2=None):
     print(arg1, arg2)
 
 
-print(MyFunction.__doc__)
+print(my_function.__doc__)
