@@ -8,7 +8,7 @@ class Point():
         self.y = y
 
     def __repr__(self):
-        return "<Point x:{0},y:{1}>".format(self.x, self.y)
+        return f"<Point x:{self.x},y:{self.y}>"
 
     # TODO: implement addition
     def __add__(self, other):

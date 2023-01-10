@@ -2,7 +2,7 @@
 # Demonstrate the use of lambda functions
 
 
-def myFunction(arg1, arg2=None):
+def my_function(arg1, arg2=None):
     """myFunction(arg1, arg2=None) --> Doesn't really do anything special.
 
     Parameters:
@@ -12,4 +12,4 @@ def myFunction(arg1, arg2=None):
     print(arg1, arg2)
 
 
-print(myFunction.__doc__)
+print(my_function.__doc__)

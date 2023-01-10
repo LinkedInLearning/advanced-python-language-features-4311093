@@ -19,4 +19,4 @@ cls1 = Person()
 # use different Python functions to convert it to a string
 print(repr(cls1))
 print(str(cls1))
-print("Formatted: {0}".format(cls1))
+print(f"Formatted: {cls1}")

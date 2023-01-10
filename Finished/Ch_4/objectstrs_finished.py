@@ -10,15 +10,15 @@ class Person():
 
     # use __repr__ to create a string useful for debugging
     def __repr__(self):
-        return "<Person Class - fname:{0}, lname:{1}, age{2}>".format(self.fname, self.lname, self.age)
+        return f"<Person Class - fname:{self.fname}, lname:{self.lname}, age{self.age}>"
 
     # use str for a more human-readable string
     def __str__(self):
-        return "Person ({0} {1} is {2})".format(self.fname, self.lname, self.age)
+        return f"Person ({self.fname} {self.lname} is {self.age})"
 
     # use bytes to convert the informal string to a bytes object
     def __bytes__(self):
-        val = "Person:{0}:{1}:{2}".format(self.fname, self.lname, self.age)
+        val = f"Person:{self.fname}:{self.lname}:{self.age}"
         return bytes(val.encode('utf-8'))
 
 
