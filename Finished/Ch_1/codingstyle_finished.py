@@ -2,20 +2,21 @@
 # Python coding style example file
 
 # imports go on their own lines
-import sys
-import os
+import datetime
+import platform
 
 
 # two blank lines separate classes from other functions
 class MyClass():
     def __init__(self):
         self.prop1 = "my class"
+        self.now = datetime.datetime.now
 
     # within classes, one blank line separates methods
     def function_name(self, use_name):
-        print(sys.api_version)
+        print(platform.version())
         if use_name:
-            print(os.name)
+            print(platform.uname())
 
 
 # Long comments, like this one that flow across several lines, are

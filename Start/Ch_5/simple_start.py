@@ -3,4 +3,4 @@
 
 x = None
 
-# TODO: Literal patterns are explicit values like integers, strings, Booleans, etc
+# TODO: Literal patterns are explicit values: integers, strings, Booleans, etc
