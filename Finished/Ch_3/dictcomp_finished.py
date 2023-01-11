@@ -6,9 +6,9 @@
 ctemps = [0, 12, 34, 100]
 
 # Use a comprehension to build a dictionary
-tempDict = {t: (t * 9/5) + 32 for t in ctemps if t < 100}
-print(tempDict)
-print(tempDict[12])
+temp_dict = {t: (t * 9/5) + 32 for t in ctemps if t < 100}
+print(temp_dict)
+print(temp_dict[12])
 
 # Merge two dictionaries with a comprehension
 team1 = {"Jones": 24, "Jameson": 18, "Smith": 58, "Burns": 7}
