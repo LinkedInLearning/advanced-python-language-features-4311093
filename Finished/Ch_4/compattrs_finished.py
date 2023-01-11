@@ -15,7 +15,7 @@ class MyColor():
         elif attr == "hexcolor":
             return f"#{self.red:02x}{self.green:02x}{self.blue:02x}"
         else:
-            raise AttributeError
+            raise AttributeError(f"{attr} is not a valid attribute")
 
         # use setattr to dynamically return a value
     def __setattr__(self, attr, val):
