@@ -27,8 +27,6 @@ def string_combiner(*args, unique=False):
         elif isinstance(arg, str):
             result += arg
 
-    # convert to a single string
-    result = "".join(result)
     # if unique is true, we need to convert to a set and then a string
     if unique:
         newresult = set()
