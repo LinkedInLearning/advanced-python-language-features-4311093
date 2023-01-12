@@ -3,7 +3,7 @@
 
 
 def my_function(arg1, arg2=None):
-    """myFunction(arg1, arg2=None) --> Doesn't really do anything special.
+    """my_function(arg1, arg2=None) --> Doesn't really do anything special.
 
     Parameters:
     arg1: the first argument. Whatever you feel like passing.
