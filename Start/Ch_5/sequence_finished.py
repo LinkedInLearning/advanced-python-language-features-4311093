@@ -14,15 +14,9 @@ operations = [
 
 result = 0
 
-# process each operation along with the set of given numbers
+# TODO: process each operation along with the set of given numbers
 for op in operations:
     match op:
-        case "Add", num1, *nums:
-            result = num1 + sum(nums)
-        case "Mul", num1, num2:
-            result = num1 * num2
-        case "Sqrt", num:
-            result = math.sqrt(num)
         case _:
             continue
 

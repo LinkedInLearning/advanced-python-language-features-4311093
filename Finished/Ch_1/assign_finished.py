@@ -24,3 +24,6 @@ val_data = {
     "average": s / l
 }
 pprint.pp(val_data)
+
+# if any((item := value) % 2 == 1 for value in values):
+#     print(f"First odd number: {item}")
