@@ -28,8 +28,9 @@ class Rectangle:
 
 
 # create a list of some shapes
-shapes = [Circle(5), Square(4), Rectangle(
-    4, 6), Square(7), Circle(9), Rectangle(2, 5)]
+shapes = [Circle(5), Square(4), Rectangle(4, 6),
+          Square(7), Circle(9), Rectangle(2, 5),
+          Rectangle(9, 9)]
 
 # use pattern matching to process each shape
 # include pattern guards for more detailed processing
@@ -41,19 +42,25 @@ for shape in shapes:
             print(f"Circle with area {shape.getarea()}")
         case Square():
             print(f"Square with area {shape.getarea()}")
+        case Rectangle(width=w, height=h) if w == h:
+            print(f"Square Rectangle with area {shape.getarea()}")
         case Rectangle():
             print(f"Rectangle with area {shape.getarea()}")
         case _:
             print(f"Unrecognized shape: {type(shape)}")
 
 # Pattern guards can get fairly sophisticated
-dataset = ["UPPER", 5, "Mixed Case", None]
+dataset = ["UPPER", 5, "Mixed Case", True, None]
 for d in dataset:
     match d:
         case str() as s if s.isupper():
             print(f"{d}: Upper case string")
         case str():
             print(f"{d}: Not an upper-case string")
+        # order is important here - Python will treat bools as ints
+        # so the check for bool has to come before int
+        case bool():
+            print(f"{d}: Boolean")
         case int():
             print(f"{d}: Integer")
         case _:

@@ -28,8 +28,8 @@ class Rectangle:
 
 
 # create a list of some shapes
-shapes = [Circle(5), Square(4), Rectangle(
-    4, 6), Square(7), Circle(9), Rectangle(2, 5)]
+shapes = [Circle(5), Square(4), Rectangle(4, 6),
+          Square(7), Circle(9), Rectangle(2, 5)]
 
 # use pattern matching to process each shape
 for shape in shapes:
