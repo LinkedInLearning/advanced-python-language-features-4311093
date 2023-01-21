@@ -65,7 +65,8 @@ for order in test_orders:
             # again, use literal strings to ensure correct type
             case "comforter" | "cover" as blanket, dry_clean, size:
                 total_price += 25.00
-                print(f"Blanket: {blanket}", "Dry clean" if dry_clean else "")
+                print(f"Blanket: ({size}) {blanket}",
+                      "Dry clean" if dry_clean else "")
             case _:
                 pass
     print(f"Order total: {total_price:.2f}")
