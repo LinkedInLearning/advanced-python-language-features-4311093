@@ -46,6 +46,7 @@ for order in test_orders:
     print("--------------")
     for item in order:
         match item:
+            # use literal strings to make sure we match accepted garments
             case "shirt" | "pants" | "jacket" | "dress" as garment, size, starch, sameday:
                 total_price += 12.95
                 if starch:
@@ -54,12 +55,14 @@ for order in test_orders:
                     total_price += 10.00
                 print(f"Dry Clean:({size}) {garment}", "Starched" if starch else "",
                       "same-day" if sameday else "")
+            # for wash and fold, capture the desc and make sure it's a string
             case str() as desc, weight:
                 if weight >= 15.0:
                     total_price += (weight * 4.95) * .9
                 else:
                     total_price += (weight * 4.95)
                 print(f"Wash/Fold: {desc}, weight: {weight:.1f}")
+            # again, use literal strings to ensure correct type
             case "comforter" | "cover" as blanket, dry_clean, size:
                 total_price += 25.00
                 print(f"Blanket: {blanket}", "Dry clean" if dry_clean else "")
