@@ -1,79 +1,69 @@
 # Example file for Advanced Python: Language Features by Joe Marini
 # Programming challenge for Structural Pattern Matching
 
-# The Challenge:
-# Our program will process the content of a restaurant to-go order.
-# 1. Each order contains a list of items with type, name, quantity, and price
-#       Type will either be "main", "side", or "drink"
-# 2. Each item has a weight, so we know what size delivery bag to use.
-#       Order weight < 1250g, small bag, otherwise large bag.
-# 3. If an order contains 3 or more of a "side" item, that item total is discounted 10%
-#       Example: 4 "side" items at 1.00 would be 4.00, minus 10% is 3.60
-# 4. Orders with more than 10 total items get additional 15% off the total.
-# 5. Output should be:
-#       Order Total Price
-#       Order item count
-#       Order Total Weight
-#       Size of bag to use (S or L)
-
-# Weight in grams of each item
-ITEM_WEIGHTS = {
-    "Burger": 125,
-    "Chicken Wings": 275,
-    "Pizza Slice": 170,
-    "Burrito": 150,
-    "Fries": 140,
-    "Onion Rings": 150,
-    "Churros": 75,
-    "Milkshake": 225,
-    "Soda": 130
-}
+# Dry Clean: [garment, size, starch, same_day]
+#   garments are shirt, pants, jacket, dress
+#   each item is 12.95, plus 2.00 for starch
+#   same day service adds 10.00 per same-day item
+# Wash and Fold: [description, weight]
+#   4.95 per pound, with 10% off if more than 15 pounds
+# Blankets: [type, dryclean, size]
+#   type is "comforter" or "cover"
+#   Flat fee of 25.00
+# ---
+# Output:
+# Order Total Price
 
 test_orders = [
     [
-        ["main", "Burger", 1, 6.99],
-        ["side", "Fries", 1, 2.99],
-        ["main", "Pizza Slice", 1, 5.79],
-        ["side", "Onion Rings", 3, 2.49],
-        ["drink", "Milkshake", 1, 4.69]
+        ["shirt", "L", True, False],
+        ["shirt", "M", True, False],
+        ["shirt", "L", False, True],
+        ["pants", "M", False, True],
+        ["pants", "S", False, False],
+        ["pants", "S", False, False],
+        ["jacket", "M", False, False],
+        ["jacket", "L", False, True]
     ],
     [
-        ["main", "Pizza Slice", 2, 5.79],
-        ["main", "Burrito", 4, 4.99],
-        ["side", "Churros", 4, 2.99],
-        ["side", "Fries", 2, 2.99],
-        ["drink", "Soda", 4, 0.99]
+        ["dress", "M", False, True],
+        ["whites", 5.25],
+        ["darks", 12.5]
+    ],
+    [
+        ["shirts and jeans", 28.0],
+        ["comforter", False, "L"],
+        ["cover", True, "L"],
+        ["shirt", "L", True, True]
     ]
 ]
-
 
 # process each order
 for order in test_orders:
     # set the initial variables for the totals
     total_price = 0.0
-    total_weight = 0
-    item_count = 0
-    bag_size = None
 
+    print("--------------")
     for item in order:
         match item:
-            # if this order has an item with quantity >= 3 apply the discount
-            case "side", name, quantity, price if quantity >= 3:
-                total_price += (quantity * price) * 0.9
-                total_weight += (ITEM_WEIGHTS[name] * quantity)
-                item_count += quantity
-            case _, name, quantity, price:
-                total_price += (quantity * price)
-                total_weight += (ITEM_WEIGHTS[name] * quantity)
-                item_count += quantity
+            case "shirt" | "pants" | "jacket" | "dress" as garment, size, starch, sameday:
+                total_price += 12.95
+                if starch:
+                    total_price += 2.00
+                if sameday:
+                    total_price += 10.00
+                print(f"Dry Clean:({size}) {garment}", "Starched" if starch else "",
+                      "same-day" if sameday else "")
+            case str() as desc, weight:
+                if weight >= 15.0:
+                    total_price += (weight * 4.95) * .9
+                else:
+                    total_price += (weight * 4.95)
+                print(f"Wash/Fold: {desc}, weight: {weight:.1f}")
+            case "comforter" | "cover" as blanket, dry_clean, size:
+                total_price += 25.00
+                print(f"Blanket: {blanket}", "Dry clean" if dry_clean else "")
             case _:
-                print(f"Error: Badly formed order item: {item}")
-
-    if (item_count >= 10):
-        total_price = total_price * .85
-
+                pass
     print(f"Order total: {total_price:.2f}")
-    print(f"Item count: {item_count}")
-    print(f"Order weight: {total_weight} grams")
-    print(f"Bag size: {'S' if total_weight < 1250 else 'L'}")
-    print("-------------------")
+    print("--------------")
