@@ -68,6 +68,7 @@ for order in test_orders:
                 print(f"Blanket: ({size}) {blanket}",
                       "Dry clean" if dry_clean else "")
             case _:
-                pass
+                print("invalid item format")
+
     print(f"Order total: {total_price:.2f}")
     print("--------------")
