@@ -8,7 +8,7 @@ class MyColor():
         self.green = 75
         self.blue = 100
 
-        # use getattr to dynamically return a value
+    # use getattr to dynamically return a value
     def __getattr__(self, attr):
         if attr == "rgbcolor":
             return (self.red, self.green, self.blue)
@@ -17,7 +17,7 @@ class MyColor():
         else:
             raise AttributeError(f"{attr} is not a valid attribute")
 
-        # use setattr to dynamically return a value
+    # use setattr to dynamically return a value
     def __setattr__(self, attr, val):
         if attr == "rgbcolor":
             self.red = val[0]
