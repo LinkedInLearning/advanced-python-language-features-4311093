@@ -9,11 +9,8 @@ class MyColor():
         self.blue = 100
 
     # TODO: use getattr to dynamically return a value
-    def __getattr__(self, attr):
-        if attr == "rgbcolor":
-            return (self.red, self.green, self.blue)
-        else:
-            raise AttributeError(f"{attr} is not a valid attribute")
+    # def __getattr__(self, attr):
+    #     pass
 
     # TODO: use setattr to dynamically return a value
     # def __setattr__(self, attr, val):
@@ -27,7 +24,6 @@ class MyColor():
 # create an instance of myColor
 cls1 = MyColor()
 # TODO: print the value of a computed attribute
-print(cls1.rgbcolor)
 
 # TODO: set the value of a computed attribute
 
