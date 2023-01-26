@@ -29,9 +29,7 @@ def string_combiner(*args, unique=False):
 
     # if unique is true, we need to convert to a set and then a string
     if unique:
-        newresult = set()
-        for c in result:
-            newresult.add(c)
+        newresult = set(result)
         result = "".join(newresult)
 
     return result
