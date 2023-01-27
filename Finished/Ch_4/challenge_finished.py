@@ -34,7 +34,7 @@ class Book():
     def __repr__(self) -> str:
         return f"<Book:{self.title}:{self.author}:{self.pages}:{self.cover}:{self.antique}:{self.price}>"
 
-    # TODO: Implement the price attribute
+    # TODO: Implement the adjustedprice attribute
     def __getattr__(self, attr):
         if attr == "adjustedprice":
             val = self.price
@@ -44,7 +44,7 @@ class Book():
                 val -= 2.0
             return val
 
-    # TODO: Implement comparisons
+    # TODO: Implement comparisons <, >, <=, >=
     def __ge__(self, other):
         return self.pages >= other.pages
 

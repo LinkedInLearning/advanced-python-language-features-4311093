@@ -29,7 +29,9 @@ class Book():
 
     # TODO: Implement the str and repr functions
 
-    # TODO: Implement
+    # TODO: Implement the adjustedprice attribute
+
+    # TODO: Implement comparisons <, >, <=, >=
 
 
 # TODO: Implement the Hard/Paperback Enum
