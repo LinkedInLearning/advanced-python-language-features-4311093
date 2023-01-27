@@ -29,7 +29,7 @@ class Book():
 
     # TODO: Implement the str and repr functions
     def __str__(self) -> str:
-        return f"{self.title} by {self.author}: {self.pagecount}, {self.cover}, {self.price}"
+        return f"{self.title} by {self.author}: {self.pages}, {self.cover}, {self.price}"
 
     def __repr__(self) -> str:
         return f"<Book:{self.title}:{self.author}:{self.pages}:{self.cover}:{self.antique}:{self.price}>"
@@ -86,17 +86,22 @@ books = [
 # TEST CODE
 
 # 1 - test the str and repr functions
+print("-------------")
 print(str(books[0]))
 print(str(books[3]))
 print(str(books[5]))
-
+print()
 print(repr(books[0]))
 print(repr(books[3]))
 print(repr(books[5]))
+print("-------------")
+print()
 
 # 2 - test the "adjustedprice" computed attribute
 for book in books:
     print(f"{book.title}: {book.adjustedprice:.2f}")
+print("-------------")
+print()
 
 # 3 - compare on pagecount
 print(books[1] > books[2])

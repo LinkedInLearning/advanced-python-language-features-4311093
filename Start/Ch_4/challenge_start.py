@@ -49,17 +49,21 @@ books = [
 # TEST CODE
 
 # 1 - test the str and repr functions
+print("-------------")
 print(str(books[0]))
 print(str(books[3]))
 print(str(books[5]))
-
+print()
 print(repr(books[0]))
 print(repr(books[3]))
 print(repr(books[5]))
+print("-------------")
 
 # 2 - test the "adjustedprice" computed attribute
 for book in books:
     print(f"{book.title}: {book.adjustedprice:.2f}")
+print("-------------")
+print()
 
 # 3 - compare on pagecount
 print(books[1] > books[2])
