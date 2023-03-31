@@ -11,7 +11,7 @@ evenSquared = list(
     map(lambda e: e**2, filter(lambda e: e > 4 and e < 16, evens)))
 print(evenSquared)
 
-# Derive a new list of numbers frm a given list
+# Derive a new list of numbers from a given list
 evenSquared = [e ** 2 for e in evens]
 print(evenSquared)
 

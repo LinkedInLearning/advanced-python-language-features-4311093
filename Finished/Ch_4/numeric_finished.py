@@ -1,6 +1,9 @@
 # Example file for Advanced Python: Language Features by Joe Marini
 # give objects number-like behavior
 
+# Refer to:
+#   https://docs.python.org/3/reference/datamodel.html#emulating-numeric-types
+
 
 class Point():
     def __init__(self, x, y):

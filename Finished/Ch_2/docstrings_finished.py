@@ -1,6 +1,8 @@
 # Example file for Advanced Python: Language Features by Joe Marini
 # Demonstrate the use of lambda functions
 
+# Refer to: 
+#   https://peps.python.org/pep-0257
 
 def my_function(arg1, arg2=None):
     """my_function(arg1, arg2=None) --> Doesn't really do anything special.
