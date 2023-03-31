@@ -1,6 +1,8 @@
 # Example file for Advanced Python: Language Features by Joe Marini
 # Simple pattern matching using literal values
 
+# Note: match-case requires at least Python 3.10
+
 x = 0
 
 # Literal patterns are explicit values like integers, strings, Booleans, etc

@@ -3,6 +3,7 @@
 
 
 # use keyword-only arguments to help ensure code clarity
+# the `*` parameter enforces the next parameter to be specified by the keyword
 def my_function(arg1, arg2, *, suppressExceptions=False):
     print(arg1, arg2, suppressExceptions)
 

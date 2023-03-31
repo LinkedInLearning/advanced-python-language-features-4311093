@@ -1,6 +1,8 @@
 # Example file for Advanced Python: Language Features by Joe Marini
 # Use special methods to compare objects to each other
 
+# Refer to:
+#   https://docs.python.org/3/reference/datamodel.html
 
 class Employee():
     def __init__(self, fname, lname, level, years_service):

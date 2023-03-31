@@ -14,6 +14,8 @@ class MyColor():
             return (self.red, self.green, self.blue)
         elif attr == "hexcolor":
             return f"#{self.red:02x}{self.green:02x}{self.blue:02x}"
+        elif attr == "hex": # a method hex()
+            return lambda: f"#{self.red:02x}{self.green:02x}{self.blue:02x}"
         else:
             raise AttributeError(f"{attr} is not a valid attribute")
 
@@ -28,7 +30,7 @@ class MyColor():
 
     # use dir to list the available properties
     def __dir__(self):
-        return ("rgbolor", "hexcolor")
+        return ("rgbcolor", "hexcolor")
 
 
 # create an instance of myColor
@@ -36,6 +38,7 @@ cls1 = MyColor()
 # print the value of a computed attribute
 print(cls1.rgbcolor)
 print(cls1.hexcolor)
+print(cls1.hex())
 
 # set the value of a computed attribute
 cls1.rgbcolor = (125, 200, 86)
