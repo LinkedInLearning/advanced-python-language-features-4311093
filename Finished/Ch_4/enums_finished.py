@@ -28,3 +28,4 @@ print(Fruit.PEAR.value)
 myFruits = {}
 myFruits[Fruit.BANANA] = "Come Mr. Tally-man"
 print(myFruits[Fruit.BANANA])
+print(myFruits)
